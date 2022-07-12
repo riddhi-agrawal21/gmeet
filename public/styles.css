@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#video-grid{
+    /* display:grid;
+    grid-template-columns: 700px;
+    grid-auto-rows: 300px; */
+    /* repeat(autofill , */
+    grid-template-columns: 700px;
+    grid-auto-rows: 300px;
+    display: flex;
+    justify-content: center;
+}
+video{
+  /* width: 50%;
+  height: 100%;
+  object-fit : cover;
+  margin-bottom: 2px; */
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+} 
+.main{
+    height: 100vh;
+    display: flex;
+}
+.main_left{
+    flex :0.8;
+    display: flex;
+    flex-direction: column;
+}
+.main_right{
+    flex :0.2;
+    display: flex;
+    flex-direction: column;
+    background-color: #242324;
+    border-left: 1px solid #3D3D42;
+}
+.main_videos{
+    background-color: black;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_footers{
+    display: flex;
+    background-color: #0b0c0c;
+    color: #D2D2D2;
+    padding: 5px;
+    justify-content: space-between;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+.buttons:hover{
+    background-color: rgb(114, 118, 121);
+    border-radius: 5px;
+}
+.blocks{
+    display: flex;
+}
+.leave_meeting{
+    color: red;
+}
+.main_header{
+    text-align: center;
+    color: #F5F5F5;
+
+}
+.main_chat_window{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+#main_chat_box{
+    display: flex;
+    padding: 22px 12px;
+}
+#main_chat_box input{
+    flex-grow: 1;
+    border: none;
+    color: #F5F5F5;
+    background-color: transparent;
+}
+
+
+.main_chat_window {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+.messages{
+        color: white;
+        list-style: none;
+        padding-left: 20px;
+}
+.user{
+    margin: 10px;
+}
+.fa-microphone-slash{
+    color: red;
+}
+.fa-video-slash{
+    color: red;
+}
+/* 
+#main_chat_area div {
+    background-color: #CCC;
+    padding: 5px;
+}
+
+#main_chat_area div:nth-child(2n) {
+    background-color: #FFF;
+} */

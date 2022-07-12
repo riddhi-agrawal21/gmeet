@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+    const ROOM_ID = "<%= roomId %>"
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/614a9474e6.js" crossorigin="anonymous"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Gmeet Clone</title>
+
+</head>
+<body>
+    <div class="main">
+        <div class = "main_left">
+            <div class = "main_videos">
+                <div id="video-grid">
+        
+                </div>
+            </div>
+            <div class = "main_footers">
+                <div class = "blocks">
+                    <div class = "buttons mute-button" onclick="muteUnmute()">
+                        <i class="fa-solid fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div class = "buttons play-button" onclick="playStop()">
+                        <i class="fa-solid fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+                <div class = "blocks">
+                    <!-- <div class = "buttons">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Security</span>
+                    </div> -->
+                    <div class = "buttons"  onclick="whiteboard()">
+                        <i class="fa-solid fa-chalkboard"></i>
+                        <span>White-Board</span>
+                    </div>
+                    <div class = "buttons">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Participants</span>
+                    </div>
+                    <div class = "buttons">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+                <div class = "blocks">
+                    <div class = "buttons">
+                        <span class = "leave_meeting">Leave Meeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "main_right">
+            <div class = "main_header">
+                <h4>Chat Box(In-call messages)</h4>
+            </div>
+            <div class="main_chat_window">
+                <ul class="messages">
+                   
+                </ul>
+    
+             </div>
+            <div id="main_chat_box">
+                <input type="text" id="chat-message" placeholder="Type your text here..">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
